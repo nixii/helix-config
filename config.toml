@@ -1,0 +1,106 @@
+
+# I like the default theme!
+theme = "default"
+
+
+
+# A few editor niceities
+[editor]
+continue-comments = false
+auto-format = false
+completion-timeout = 5
+preview-completion-insert = false
+
+
+
+# Custom status :O
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending","file-type"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
+
+
+
+# Underline is better for select
+[editor.cursor-shape]
+select = "underline"
+
+
+
+# I want to see the gitignore file
+[editor.file-picker]
+git-ignore = true
+
+
+
+# Saving is good!
+[editor.auto-save]
+focus-lost = true
+
+
+
+# Stop wrapping around here
+[editor.search]
+wrap-around = false
+
+
+
+# Show tabs so I can tell the difference between them and spaces
+[editor.whitespace.render]
+tab = "all"
+
+
+
+# Key normal stuff
+[keys.normal]
+
+# Special save key
+C-s = ":w"
+
+# Cut 
+C-x = "@yd"
+
+# Selection stuff
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
+
+# Just continue the line
+x = "extend_line"
+
+# Append right here, and move forward a character
+a = ["append_mode", "collapse_selection"]
+
+# Movement
+C-j = ["move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down","move_line_down"]
+C-k = ["move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up","move_line_up"]
+
+
+
+# Select the current word
+[keys.normal.m]
+w = "@vmaw"
+
+
+
+# Visual mode stuff
+[keys.select]
+
+# Cut
+C-x = "@yd"
+
+# Go right back to normal mode and stop selecting
+";" = ["collapse_selection", "normal_mode"]
+
+# Some niceties
+x = "extend_line"
+V = "extend_to_line_end"
+
+
+
+# Add the custom select word
+[keys.select.m]
+w = "@maw"
