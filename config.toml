@@ -87,6 +87,12 @@ w = "@vmaw"
 
 
 
+# Special space stuff
+[keys.normal.space]
+"[" = ":buffer-previous"
+"]" = ":buffer-next"
+
+
 # Visual mode stuff
 [keys.select]
 
