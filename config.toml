@@ -10,6 +10,7 @@ continue-comments = false
 auto-format = false
 completion-timeout = 5
 preview-completion-insert = false
+bufferline = "multiple"
 
 
 
